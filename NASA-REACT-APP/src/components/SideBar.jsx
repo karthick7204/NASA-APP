@@ -1,12 +1,20 @@
-  
-export default function SideBar(){
-    return(
-        <div className="sidebar">
-             <h2>the martian struggle</h2>
-             <div>
-                <p>description</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ex eos deleniti culpa dolor</p>
-             </div>
+export default function SideBar(props) {
+    const { HandleToggleModel , data} = props
+  return (
+    <div className="sidebar">
+      <div className="bgOverlay"></div>
+      <div className="sidebarContents">
+        <h2>{data?.title}</h2>
+        <div className="descriptionContainer">
+          <p className="descriptionTitle">Description</p>
+          <p>
+           {data?.explanation}
+          </p>
         </div>
-    )
+        <button onClick={ HandleToggleModel}>
+          <i className="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  );
 }

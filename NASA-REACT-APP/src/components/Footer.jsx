@@ -1,15 +1,18 @@
-export default function Footer(){
-    return(
-        <Footer>
-            <div>
-                <h2>
-                    brutal martian picture
-                </h2>
-                <h1>nasa project</h1>
-                <button>
-                <i className="fa-solid fa-circle-info"></i>
-                </button>
-            </div>
-        </Footer>
-    )
-}
+
+export default function Footer(props) {
+    const {showModal, HandleToggleModel ,data} = props
+    return (
+        <footer>
+         <div className="bgGradient"></div>
+         <div>
+         <h1>APOD Project</h1>
+         <h2>{data?.title}</h2>
+        
+        </div>
+        <button onClick={HandleToggleModel}>
+          <i className="fa-solid fa-circle-info"></i>
+        </button>
+      </footer>
+    );
+  }
+  
